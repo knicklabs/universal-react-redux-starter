@@ -1,0 +1,17 @@
+doctype html
+html
+
+  head
+    !=head.title
+    !=head.meta
+    link(rel="stylesheet", href="#{cssAsset}")
+
+  body
+
+    #app!= body
+
+    script.
+      window.__CHUNKS__ = !{chunks};
+      window.__DATA__ = !{data};
+    script(src="#{vendorAsset}")
+    script(src="#{jsAsset}")
